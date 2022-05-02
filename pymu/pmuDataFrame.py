@@ -305,8 +305,8 @@ class Stat:
 
     def parseTimeQuality(self):
         """Parse time quality bits"""
-        self.unlockedTime = TimeQuality(int(hexToBin(self.statHex[1:3], 8)[3:6], 2)).name
-        print("TimeQuality: ", self.unlockedTime) if self.dbg else None
+        self.timeQuality = TimeQuality(int(hexToBin(self.statHex[1:3], 8)[3:6], 2)).name
+        print("TimeQuality: ", self.timeQuality) if self.dbg else None
 
     def parseUnlockTime(self):
         """Parse unlocked time bits"""
